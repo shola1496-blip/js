@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./tailwind.js"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <style>
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 55px;
+            height: 28px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            inset: 0;
+            background-color: #ccc;
+            border-radius: 30px;
+            transition: 0.4s;
+        }
+
+        .slider::before {
+            content: "";
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            border-radius: 50%;
+            transition: 0.4s;
+        }
+
+        input:checked+.slider {
+            background-color: #2196F3;
+        }
+
+        input:checked+.slider::before {
+            transform: translateX(27px);
+        }
+
+        .text-container {
+            display: flex;
+            gap: 8px;
+            font-size: 30px;
+            font-weight: normal;
+        }
+
+        .changing-text {
+            height: 40px;
+            overflow: hidden;
+            color: #21f391;
+        }
+
+        .changing-text span {
+            display: block;
+            height: 40px;
+            animation: changeText 8s infinite;
+        }
+
+        @keyframes changeText {
+
+            0%,
+            20% {
+                transform: translateY(0);
+            }
+
+            25%,
+            45% {
+                transform: translateY(-40px);
+            }
+
+            50%,
+            70% {
+                transform: translateY(-80px);
+            }
+
+            75%,
+            95% {
+                transform: translateY(-120px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        
+
+    </style>
+</head>
+
+<body class="bg-white">
+    <div class=" flex flex-row pt-9 justify-between items-center max-w-6xl mx-auto px-6 animate__animated animate__pulse  ">
+        <img src="./assignment/image/landkit.png" alt="">
+
+        <nav class="flex items-center text-center justify-between text-black ">
+            <ul class=" text-black flex flex-row  px-2 ">
+                <li><a class="px-5" href="">Landings</a></li>
+                <li><a class="px-5" href="">Pages</a></li>
+                <li><a class="px-5" href="">Account</a></li>
+                <li><a class="px-5" href="">Documentation</a></li>
+            </ul>
+        </nav>
+
+        <div>
+            <button class="p-4 bg-blue-600 rounded-xl">Buy now</button>
+        </div>
+
+    </div>
+
+
+    <!-- ghfhgfhfhg -->
+
+    <div class="flex flex-row justify-between items-center mt-11 max-w-6xl mx-auto px-6">
+        <div class="w-1/2 animate__animated animate__slideInLeft animate__delay-1s">
+            <div class=" px-6">
+                <span class="text-black text-5xl font-semibold">Welcome to <span
+                        class="text-blue-600 text-5xl font-semibold">Landkit.</span> <br
+                        class="text-6xl font-bold">Develop
+                    anything.</span>
+                <p class="pt-4 font-extralight ">Build a beautiful modern website with flexible <br>Bookstrap components
+                    built
+                    from scratch.</p>
+            </div>
+
+            <div class="mt-15 ml-2 flex flex-row gap-5">
+                <button class="bg-blue-400 py-4 rounded-2xl px-6  w-44">View all pages <span>&#10148</span> </button>
+                <button class="py-4 rounded-2xl px-6  w-44 bg-blue-100">Documentation</button>
+            </div>
+        </div>
+
+        <div class="w-1/2 align-bottom">
+
+            <img src="./assignment/image/image.png">
+        </div>
+
+    </div>
+
+    <div class="flex flex-row justify-center items-center gap-20 mt-24 max-w-6xl mx-auto px-6 ">
+        <div class="flex flex-col gap-6 ">
+            <img src="./assignment/image/ggg.svg" class="w-10">
+            <span class="font-semibold text-2xl">Built for developers</span>
+            <span class="opacity-45">Landkit is built to make your life easier. Variables, build tooling, documentation,
+                and reusable components.</span>
+        </div>
+
+        <div class="flex flex-col gap-6">
+            <img src="./assignment/image/ggs.svg" class="w-10">
+            <span class="font-semibold text-2xl">Designed to be modern</span>
+            <span class="opacity-45">Designed with the latest design trends in mind. Landkit feels modern, minimal, and
+                beautiful.</span>
+        </div>
+
+        <div class="flex flex-col gap-6">
+            <img src="./assignment/image/ggv.svg" class="w-10">
+            <span class="font-semibold text-2xl">Documentation for everything</span>
+            <span class="opacity-45">We've written extensive documentation for components and tools, so you never have
+                to reverse engineer anything.</span>
+
+
+        </div>
+
+    </div>
+
+    <div class="flex flex-row gap-23 mt-20 justify-center mas-w-6xl mx-auto px-6 mb-10">
+        <img src="./assignment/image/air.svg" class="w-28 opacity-45">
+        <img src="./assignment/image/pine.svg" class="w-28 opacity-45">
+        <img src="./assignment/image/dri.svg" class="w-28 opacity-45">
+        <img src="./assignment/image/ins.svg" class="w-28 opacity-45">
+        <img src="./assignment/image/net.svg" class="w-28 opacity-45">
+        <img src="./assignment/image/coin.svg" class="w-28 opacity-45">
+    </div>
+
+
+    <div class="bg-gray-100">
+        <div class="flex flex-row">
+            <div class=" flex-col gap-6 pt-10 max-w-6xl mx-auto px-6">
+                <img src="./assignment/image/what.jpg" class="w-85 mt-24 flex ">
+                <input type="text" placeholder="Name" class=" py-4  w-60 outline-none flex">
+                <input type="text" placeholder="E-mail" class=" py-4  w-60 outline-none flex">
+                <input type="text" placeholder="Password" class=" py-4  w-60 outline-none flex">
+
+                <button class="p-3 bg-green-400 px-8 mt-10 text-white rounded-l">Download a sample</button>
+            </div>
+
+            <div class="mt-40 pr-20 ">
+                <span class="font-semibold text-3xl">The most useful resource
+                </span>
+                <div class="text-container">
+                    <span>Ever created for</span>
+                    <div class="changing-text">
+                        <span>Developer</span>
+                        <span>Designer</span>
+                        <span>Founders</span>
+                    </div>
+                </div>
+                <span class="font-light text-2xl">Using Landkit to build your site means never worrying <br> about
+                    designing
+                    another page or cross browser compatibility. <br> Our ever-growing library of components and
+                    pre-designed <br> layouts will make your life easier.</span>
+                <div class="mt-16">
+                    <div class="flex flex-row gap-8 mb-5">
+                        <div class=" flex flex-row gap-4 ">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <path d="M0 0h24v24H0z" fill="none" />
+                                    <path fill="#70d077" fill-rule="evenodd"
+                                        d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1m4.768 9.14a1 1 0 1 0-1.536-1.28l-4.3 5.159l-2.225-2.226a1 1 0 0 0-1.414 1.414l3 3a1 1 0 0 0 1.475-.067z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+
+                            <span>Lifetime updates</span>
+
+                        </div>
+                        <div class=" flex flex-row gap-4 ">
+
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <path d="M0 0h24v24H0z" fill="none" />
+                                    <path fill="#70d077" fill-rule="evenodd"
+                                        d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1m4.768 9.14a1 1 0 1 0-1.536-1.28l-4.3 5.159l-2.225-2.226a1 1 0 0 0-1.414 1.414l3 3a1 1 0 0 0 1.475-.067z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>Tech support</div>
+
+                        </div>
+                    </div>
+                    <div class="flex flex-row gap-13">
+                        <div class=" flex flex-row gap-4">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <path d="M0 0h24v24H0z" fill="none" />
+                                    <path fill="#70d077" fill-rule="evenodd"
+                                        d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1m4.768 9.14a1 1 0 1 0-1.536-1.28l-4.3 5.159l-2.225-2.226a1 1 0 0 0-1.414 1.414l3 3a1 1 0 0 0 1.475-.067z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span>Tons of assets</span>
+                            </div>
+                        </div>
+                        <div class=" flex flex-row gap-4">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <path d="M0 0h24v24H0z" fill="none" />
+                                    <path fill="#70d077" fill-rule="evenodd"
+                                        d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1m4.768 9.14a1 1 0 1 0-1.536-1.28l-4.3 5.159l-2.225-2.226a1 1 0 0 0-1.414 1.414l3 3a1 1 0 0 0 1.475-.067z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span>Integration ready</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="flex mt-20 max-w-6xl mx-auto px-6 gap-4">
+            <div class="w-full">
+                <div class=" flex-col gap-4">
+                    <span class="font-light text-4xl">We have lots of experience <span
+                            class="flex flex-col text-blue-300 mb-4">building Bootstrap themes.</span></span>
+                    <p class="font-normal text-xl text-blue-300">We've built well over a dozen Bootstrap themes and sold
+                        <br> tens of thousands of copies.
+                    </p>
+                </div>
+
+                <div class="flex flex-row gap-8 mt-8 mb-8 ">
+                    <img src="./assignment/image/rou.svg" class="w-14">
+                    <div class="flex flex-col gap-2">
+                        <span class="font-normal text-xl">Bootstrap users since the beginning </span>
+                        <span class="font-serif text-blue-300 text-lg"> We've been developing with Bootstrap since it
+                            was
+                            <br>
+                            publicly released in 2011.</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-row gap-8">
+                    <img src="./assignment/image/ggv.svg" class="w-14">
+                    <div class="flex flex-col gap-2">
+                        <span class="font-normal text-xl">Deep understanding of Bootstrap </span>
+                        <span class="font-serif text-blue-300 text-lg"> We've watched Bootstrap grow up over the years
+                            and <br> understand it better than almost
+                            anyone.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="[perspective:1000px]">
+                <img src="./assignment/image/dashkit.jpg"
+                    class="w-full transition-transform duration-500 [transform:rotateY(-35deg)_rotateX(10deg)]">
+            </div>
+
+
+        </div>
+
+        <div class="flex flex-col mt-28 max-w-6xl mx-auto px-6 text-center mb-28">
+            <h1 class="text-3xl mb-4">Our customers are our biggest fans.</h1>
+            <p class="text-xl text-blue-300">We don't like to brag, but we don't mind letting our customers do it for
+                us.</p>
+            <p class="text-xl text-blue-300">Here are a few nice things folks have said about our themes over the years.
+            </p>
+        </div>
+        <section class="flex max-w-4xl mx-auto bg-white relative ">
+            <div class="w-full flex flex-row ">
+                <div>
+                    <img src="./assignment/image/photo-26.jpg" class="w-full">
+                </div>
+
+                <div class="w-full text-current px-10 ml-10 mt-14 cursor-pointer">
+                    <h2 class="text-3xl font-semibold mb-8 font-mono ">Instagram</h2>
+                    <p class="text-gray-500 leading-relaxed">"I've never used a theme as versatile and
+                        flexible as Landkit. It's my go to for building
+                        landing sites on almost any project."</p>
+                </div>
+            </div>
+
+            <button class="absolute left-0 top-1/2 bg-blue-600 text-white rounded-full w-12 h-12">
+                &#8592
+            </button>
+            <button class="absolute right-0 top-1/2  bg-blue-600 text-white rounded-full w-12 h-12"> &#8594
+            </button>
+
+
+
+        </section>
+
+        <div class=" flex max-w-6xl mx-auto px-6 gap-4 mt-28">
+            <div class="w-full ">
+                <h1 class="text-4xl">Stay focused on your business.</h1>
+                <h1 class="text-4xl text-blue-300">Let us handle the design.</h1>
+
+                <p class="mt-6 text-xl font-light">You have a business to run. Stop worring about cross- <br>
+                    browser bugs, designing new pages, keeping your <br>
+                    components up to date. Let us do that for you.</p>
+                <div class="flex flex-row mt-9 gap-8">
+                    <div class="flex-col flex">
+                        <span class="text-2xl">100%</span>
+                        <span class="text-xl"> Satisfaction</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-2xl"> 24/ 7</span>
+                        <span class="text-xl">Support</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-2xl"> 100k+</span>
+                        <span class="text-xl">Sales</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./assignment/image/illustration-8.png">
+            </div>
+
+        </div>
+
+        <div class="flex flex-col mt-28 max-w-6xl mx-auto px-6 text-center">
+            <h1 class="text-3xl mb-4">Fair, simple pricing for all.</h1>
+            <p class="text-xl text-blue-300">All types of businesses need access to development resources,<br>
+                so we give you the option to decide how much you need to use.</p>
+            <div class="mt-8 flex flex-row justify-center gap-5">
+
+                <span>Annual</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+                <span>Monthly</span>
+            </div>
+        </div>
+
+        <div>
+            <div class="flex flex-col  bg-white  max-w-lg ml-14 px-6 mt-28">
+                <div class="text-center flex-col flex gap-5 mb-10">
+                    <span class="bg-blue-200 p-1 mt-4 rounded-sm w-fit text-center mx-auto">
+                        Standard
+                    </span>
+                    <span class="text-4xl">$29/mo
+                    </span>
+                    <span class="font-light">
+                        per seat
+                    </span>
+                </div>
+                <ul class="flex flex-col list-none mx-auto">
+                    <div class=" ">
+                        <li class="flex flex-row gap-7 mb-10"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                                height="1em" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path fill="#70d077" fill-rule="evenodd"
+                                    d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1m4.768 9.14a1 1 0 1 0-1.536-1.28l-4.3 5.159l-2.225-2.226a1 1 0 0 0-1.414 1.414l3 3a1 1 0 0 0 1.475-.067z"
+                                    clip-rule="evenodd" />
+                            </svg> Rich, responsive landing pages</li>
+                        <li class="flex flex-row gap-7 mb-10"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                                height="1em" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path fill="#70d077" fill-rule="evenodd"
+                                    d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1m4.768 9.14a1 1 0 1 0-1.536-1.28l-4.3 5.159l-2.225-2.226a1 1 0 0 0-1.414 1.414l3 3a1 1 0 0 0 1.475-.067z"
+                                    clip-rule="evenodd" />
+                            </svg> 100+ styled components</li>
+                        <li class="flex flex-row gap-7 mb-10"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                                height="1em" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path fill="#70d077" fill-rule="evenodd"
+                                    d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1m4.768 9.14a1 1 0 1 0-1.536-1.28l-4.3 5.159l-2.225-2.226a1 1 0 0 0-1.414 1.414l3 3a1 1 0 0 0 1.475-.067z"
+                                    clip-rule="evenodd" />
+                            </svg> Flexible, simple license</li>
+                        <li class="flex flex-row gap-7 mb-10"> <svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                                height="1em" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path fill="#70d077" fill-rule="evenodd"
+                                    d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1m4.768 9.14a1 1 0 1 0-1.536-1.28l-4.3 5.159l-2.225-2.226a1 1 0 0 0-1.414 1.414l3 3a1 1 0 0 0 1.475-.067z"
+                                    clip-rule="evenodd" />
+                            </svg> Speedy build tooling</li>
+                        <li class="flex flex-row gap-7 mb-10"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                                height="1em" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path fill="#70d077" fill-rule="evenodd"
+                                    d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1m4.768 9.14a1 1 0 1 0-1.536-1.28l-4.3 5.159l-2.225-2.226a1 1 0 0 0-1.414 1.414l3 3a1 1 0 0 0 1.475-.067z"
+                                    clip-rule="evenodd" />
+                            </svg> 6 months free support included</li>
+                    </div>
+                </ul>
+
+                <button class="bg-blue-400 p-5 max-w-full">Get it now</button>
+
+
+            </div>
+
+            <div class="text-center mt-14 flex flex-col ">
+
+                <span class="text-3xl font-light">We offer variable pricing with discounts for larger organizations. Get
+                    <br>
+                    in touch with us and we will figure out <br>
+                    something that works for everyone</span>
+
+                <button class="bg-slate-500">Contact us</button>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="ern" style="background-color: darkslategray;">
+
+            <div class=" max-w-5xl mx-auto items-center">
+                <div class="flex flex-row gap-14 pt-10 mb-16">
+                    <div class="flex flex-row gap-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 48 48">
+                            <path d="M0 0h48v48H0z" fill="none" />
+                            <circle cx="24" cy="34.748" r=".75" fill="#1ce330" />
+                            <path fill="none" stroke="#1ce330" stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.08 19.423c0-1.911.774-3.641 2.027-4.894s2.982-2.027 4.893-2.027a6.92 6.92 0 0 1 6.92 6.92c0 1.912-.645 3.786-2.027 4.894c-1.432 1.149-4.918 3.031-4.918 5.96" />
+                            <circle cx="24" cy="24" r="21.5" fill="none" stroke="#1ce330" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <div class="flex flex-col gap-2">
+                            <span class="font-normal text-white text-xl">Can I use Landkit for my clients?</span>
+                            <span class="font-serif text-white text-lg">Absolutely. The Bootstrap Themes license allows
+                                you
+                                to <br>
+                                build a website for personal use or for a client.</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-row gap-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 48 48">
+                            <path d="M0 0h48v48H0z" fill="none" />
+                            <circle cx="24" cy="34.748" r=".75" fill="#1ce330" />
+                            <path fill="none" stroke="#1ce330" stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.08 19.423c0-1.911.774-3.641 2.027-4.894s2.982-2.027 4.893-2.027a6.92 6.92 0 0 1 6.92 6.92c0 1.912-.645 3.786-2.027 4.894c-1.432 1.149-4.918 3.031-4.918 5.96" />
+                            <circle cx="24" cy="24" r="21.5" fill="none" stroke="#1ce330" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <div class="flex flex-col gap-2">
+                            <span class="font-normal text-white text-xl">Is there a money back guarantee?</span>
+                            <span class="font-serif text-white text-lg">Yup! Bootstrap Themes come with a satisfaction
+                                <br>
+                                guarantee. Submit a return and get your money back.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-row gap-16 pt-10 ">
+                    <div class="flex flex-row gap-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 48 48">
+                            <path d="M0 0h48v48H0z" fill="none" />
+                            <circle cx="24" cy="34.748" r=".75" fill="#1ce330" />
+                            <path fill="none" stroke="#1ce330" stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.08 19.423c0-1.911.774-3.641 2.027-4.894s2.982-2.027 4.893-2.027a6.92 6.92 0 0 1 6.92 6.92c0 1.912-.645 3.786-2.027 4.894c-1.432 1.149-4.918 3.031-4.918 5.96" />
+                            <circle cx="24" cy="24" r="21.5" fill="none" stroke="#1ce330" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <div class="flex flex-col gap-2">
+                            <span class="font-normal text-white text-xl">Do I get free updates?</span>
+                            <span class="font-serif text-white text-lg">Yes. We update all of our themes with each
+                                Bootstrap
+                                <br> update, plus are constantly adding new components,<br>
+                                pages, and features to our themes.</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-row gap-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 48 48">
+                            <path d="M0 0h48v48H0z" fill="none" />
+                            <circle cx="24" cy="34.748" r=".75" fill="#1ce330" />
+                            <path fill="none" stroke="#1ce330" stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.08 19.423c0-1.911.774-3.641 2.027-4.894s2.982-2.027 4.893-2.027a6.92 6.92 0 0 1 6.92 6.92c0 1.912-.645 3.786-2.027 4.894c-1.432 1.149-4.918 3.031-4.918 5.96" />
+                            <circle cx="24" cy="24" r="21.5" fill="none" stroke="#1ce330" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <div class="flex flex-col gap-2">
+                            <span class="font-normal text-white text-xl">Does it work with Rails? React? Laravel?</span>
+                            <span class="font-serif text-white text-lg">Yes. Landkit has basic CSS/JS files you can
+                                include. If you
+                                <br> want to enable deeper customization, you can
+                                <br> integrate it into your assets pipeline or build processes.
+                            </span>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+
+
+</html>
